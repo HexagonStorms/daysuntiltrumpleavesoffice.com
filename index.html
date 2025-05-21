@@ -4,24 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presidential Countdown</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Days Until Trump Leaves Office</h1>
-        <div class="countdown-wrapper">
-            <div class="countdown-box">
-                <div id="countdown" class="countdown"></div>
-                <div id="milliseconds" class="milliseconds">000</div>
+    <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <div class="text-center">
+                    <!-- Main Title -->
+                    <div class="mb-4 mb-md-5">
+                        <h1 class="title display-1 fw-bold">
+                            Days Until Trump Leaves Office
+                        </h1>
+                    </div>
+                    
+                    <!-- Countdown Section -->
+                    <div class="countdown-wrapper mb-4 mb-md-5">
+                        <div class="countdown-box p-3 p-md-4 p-lg-5 rounded-3 shadow-lg">
+                            <div class="d-flex justify-content-center align-items-baseline flex-wrap gap-2">
+                                <div id="countdown" class="countdown display-2 fw-bold text-white"></div>
+                                <div id="milliseconds" class="milliseconds h3 text-danger fw-bold">000</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- American Flag -->
+                    <div class="flag-container mb-4">
+                        <svg class="american-flag" viewBox="0 0 190 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Flag Stripes -->
+                            <rect width="190" height="100" fill="#B22234"/>
+                            <rect y="7.69" width="190" height="7.69" fill="white"/>
+                            <rect y="23.08" width="190" height="7.69" fill="white"/>
+                            <rect y="38.46" width="190" height="7.69" fill="white"/>
+                            <rect y="53.85" width="190" height="7.69" fill="white"/>
+                            <rect y="69.23" width="190" height="7.69" fill="white"/>
+                            <rect y="84.62" width="190" height="7.69" fill="white"/>
+                            
+                            <!-- Blue Canton -->
+                            <rect width="76" height="53.85" fill="#3C3B6E"/>
+                            
+                            <!-- Stars -->
+                            <g fill="white">
+                                <!-- Row 1 (6 stars) -->
+                                <circle cx="7.6" cy="4.6" r="1.5"/>
+                                <circle cx="19" cy="4.6" r="1.5"/>
+                                <circle cx="30.4" cy="4.6" r="1.5"/>
+                                <circle cx="41.8" cy="4.6" r="1.5"/>
+                                <circle cx="53.2" cy="4.6" r="1.5"/>
+                                <circle cx="64.6" cy="4.6" r="1.5"/>
+                                <!-- Row 2 (5 stars) -->
+                                <circle cx="13.3" cy="10.8" r="1.5"/>
+                                <circle cx="24.7" cy="10.8" r="1.5"/>
+                                <circle cx="36.1" cy="10.8" r="1.5"/>
+                                <circle cx="47.5" cy="10.8" r="1.5"/>
+                                <circle cx="58.9" cy="10.8" r="1.5"/>
+                                <!-- Row 3 (6 stars) -->
+                                <circle cx="7.6" cy="17" r="1.5"/>
+                                <circle cx="19" cy="17" r="1.5"/>
+                                <circle cx="30.4" cy="17" r="1.5"/>
+                                <circle cx="41.8" cy="17" r="1.5"/>
+                                <circle cx="53.2" cy="17" r="1.5"/>
+                                <circle cx="64.6" cy="17" r="1.5"/>
+                                <!-- Row 4 (5 stars) -->
+                                <circle cx="13.3" cy="23.2" r="1.5"/>
+                                <circle cx="24.7" cy="23.2" r="1.5"/>
+                                <circle cx="36.1" cy="23.2" r="1.5"/>
+                                <circle cx="47.5" cy="23.2" r="1.5"/>
+                                <circle cx="58.9" cy="23.2" r="1.5"/>
+                                <!-- Row 5 (6 stars) -->
+                                <circle cx="7.6" cy="29.4" r="1.5"/>
+                                <circle cx="19" cy="29.4" r="1.5"/>
+                                <circle cx="30.4" cy="29.4" r="1.5"/>
+                                <circle cx="41.8" cy="29.4" r="1.5"/>
+                                <circle cx="53.2" cy="29.4" r="1.5"/>
+                                <circle cx="64.6" cy="29.4" r="1.5"/>
+                                <!-- Row 6 (5 stars) -->
+                                <circle cx="13.3" cy="35.6" r="1.5"/>
+                                <circle cx="24.7" cy="35.6" r="1.5"/>
+                                <circle cx="36.1" cy="35.6" r="1.5"/>
+                                <circle cx="47.5" cy="35.6" r="1.5"/>
+                                <circle cx="58.9" cy="35.6" r="1.5"/>
+                                <!-- Row 7 (6 stars) -->
+                                <circle cx="7.6" cy="41.8" r="1.5"/>
+                                <circle cx="19" cy="41.8" r="1.5"/>
+                                <circle cx="30.4" cy="41.8" r="1.5"/>
+                                <circle cx="41.8" cy="41.8" r="1.5"/>
+                                <circle cx="53.2" cy="41.8" r="1.5"/>
+                                <circle cx="64.6" cy="41.8" r="1.5"/>
+                                <!-- Row 8 (5 stars) -->
+                                <circle cx="13.3" cy="48" r="1.5"/>
+                                <circle cx="24.7" cy="48" r="1.5"/>
+                                <circle cx="36.1" cy="48" r="1.5"/>
+                                <circle cx="47.5" cy="48" r="1.5"/>
+                                <circle cx="58.9" cy="48" r="1.5"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="footer">
+                        <p class="h5 text-muted text-uppercase letter-spacing">
+                            Inauguration Day: January 20, 2029
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer">
-            <p>Inauguration Day: January 20, 2029</p>
-        </div>
     </div>
+    
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
